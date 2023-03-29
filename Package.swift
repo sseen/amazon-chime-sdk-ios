@@ -7,9 +7,6 @@ let package = Package(
     name: "Test-SPM",
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
-        .library(
-            name: "Test-SPM",
-            targets: ["Test-SPM"]),
         .library(name: "TestSDK", targets: ["TestSDK", "TestSDKMedia"]),
         .library(name: "TestSDKMedia", targets: ["TestSDKMedia"]),
         .library(name: "TestSDKMachineLearning", targets: ["TestSDKMachineLearning"])
