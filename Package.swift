@@ -10,6 +10,10 @@ let package = Package(
         .library(
             name: "Test-SPM",
             targets: ["Test-SPM"]),
+        .library(name: "TestSDK", targets: ["TestSDK", "TestSDKMedia"]),
+        .library(name: "TestSDKMedia", targets: ["TestSDKMedia"]),
+        .library(name: "TestSDKMachineLearning", targets: ["TestSDKMachineLearning"])
+   
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -18,11 +22,17 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .target(
-            name: "Test-SPM",
-            dependencies: []),
-        .testTarget(
-            name: "Test-SPMTests",
-            dependencies: ["Test-SPM"]),
+        .binaryTarget(
+            name: "TestSDK",
+            path: "Sources/TestSDK.xcframework"
+        ),
+        .binaryTarget(
+            name: "TestSDKMedia",
+            path: "Sources/TestSDKMedia.xcframework"
+        ),
+        .binaryTarget(
+            name: "TestSDKMachineLearning",
+            path: "Sources/TestSDKMachineLearning.xcframework"
+        )
     ]
 )
