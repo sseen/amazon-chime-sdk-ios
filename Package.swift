@@ -7,9 +7,9 @@ let package = Package(
     name: "Test-SPM",
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
-        .library(name: "TestSDK", targets: ["TestSDK", "TestSDKMedia"]),
-        .library(name: "TestSDKMedia", targets: ["TestSDKMedia"]),
-        .library(name: "TestSDKMachineLearning", targets: ["TestSDKMachineLearning"])
+        .library(name: "AmazonChimeSDK", targets: ["AmazonChimeSDK", "AmazonChimeSDKMedia"]),
+        .library(name: "AmazonChimeSDKMedia", targets: ["AmazonChimeSDKMedia"]),
+        .library(name: "AmazonChimeSDKMachineLearning", targets: ["AmazonChimeSDKMachineLearning"])
    
     ],
     dependencies: [
@@ -20,16 +20,16 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .binaryTarget(
-            name: "TestSDK",
-            path: "Sources/TestSDK.xcframework"
+            name: "AmazonChimeSDK",
+            path: "Sources/AmazonChimeSDK.xcframework"
         ),
         .binaryTarget(
-            name: "TestSDKMedia",
-            path: "Sources/TestSDKMedia.xcframework"
+            name: "AmazonChimeSDKMedia",
+            path: "Sources/AmazonChimeSDKMedia.xcframework"
         ),
         .binaryTarget(
-            name: "TestSDKMachineLearning",
-            path: "Sources/TestSDKMachineLearning.xcframework"
+            name: "AmazonChimeSDKMachineLearning",
+            path: "Sources/AmazonChimeSDKMachineLearning.xcframework"
         )
     ]
 )
