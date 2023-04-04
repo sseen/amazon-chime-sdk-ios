@@ -10,7 +10,6 @@ let package = Package(
         .library(name: "AmazonChimeSDK", targets: ["AmazonChimeSDK", "AmazonChimeSDKMedia"]),
         .library(name: "AmazonChimeSDKMedia", targets: ["AmazonChimeSDKMedia"]),
         .library(name: "AmazonChimeSDKMachineLearning", targets: ["AmazonChimeSDKMachineLearning"])
-   
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
