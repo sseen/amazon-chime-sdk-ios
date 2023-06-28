@@ -18,6 +18,8 @@ class JoiningViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var audioModeOptionsPicker: UIPickerView!
     @IBOutlet var joinButton: UIButton!
     @IBOutlet var debugSettingsButton: UIButton!
+    
+    
 
     var callKitOptions = ["Don't use CallKit", "CallKit as Incoming in 10s", "CallKit as Outgoing"]
     var audioModeOptions = ["Stereo/48KHz Audio", "Mono/48KHz Audio", "Mono/16KHz Audio"]
@@ -101,7 +103,7 @@ class JoiningViewController: UIViewController, UITextFieldDelegate {
 
     func joinMeeting(audioVideoConfig: AudioVideoConfiguration, callKitOption: CallKitOption) {
         view.endEditing(true)
-        let meetingId = meetingIdTextField.text ?? ""
+        var meetingId = meetingIdTextField.text ?? ""
         let name = nameTextField.text ?? ""
 
         if meetingId.isEmpty || name.isEmpty {
@@ -111,6 +113,8 @@ class JoiningViewController: UIViewController, UITextFieldDelegate {
             }
             return
         }
+        
+        meetingId = "ca0f0896b16e880c1e1b1979808d86c6"
 
         MeetingModule.shared().prepareMeeting(meetingId: meetingId,
                                               selfName: name,

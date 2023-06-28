@@ -16,6 +16,7 @@ class DeviceSelectionViewController: UIViewController {
     @IBOutlet var videoFormatPicker: UIPickerView!
     @IBOutlet var videoPreviewImageView: DefaultVideoRenderView!
     @IBOutlet var joinButton: UIButton!
+    
 
     var model: DeviceSelectionModel?
 

@@ -38,8 +38,10 @@ class HttpUtils {
 
         if let data = jsonData, method.lowercased() == "post" {
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            //mapOf("X-API-KEY" to "44p8ILVBQw26o7b5vlhYYadFeM7RTxwh8gcdWUJd")
             request.httpBody = data
         }
+        request.addValue("44p8ILVBQw26o7b5vlhYYadFeM7RTxwh8gcdWUJd", forHTTPHeaderField: "X-API-KEY")
 
         URLSession.shared.dataTask(with: request) { data, resp, error in
             if let error = error {
